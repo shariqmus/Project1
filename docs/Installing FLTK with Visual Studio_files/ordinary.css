@@ -1,0 +1,112 @@
+body
+{
+    /*font-family: "arial";*/
+    width: 650px;
+    margin-left: 20px;
+}
+
+hr
+{
+    width: 650px;
+    text-align:left;
+}
+
+/*
+table
+{
+    text-align: center;
+    border-style: solid;
+    display:table
+}
+*/
+table li p
+{
+    width:auto;
+    text-align:left;
+}
+
+p
+{
+    width: 650px;
+    text-align: justify;
+}
+
+blockquote
+{
+    font-family: "courier";
+    font-size: 80%;
+}
+
+.margin25pct
+{
+    text-align: left;
+    margin-left: 21%;
+}
+
+.margin30pct
+{
+    text-align: left;
+    margin-left: 25%;
+}
+
+p.rightalign
+{
+    width: 650px;
+    margin-left: 30px;
+    text-align: right;
+}
+
+p.paraquote
+{
+    width: 560px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.centeralign
+{
+    width: 650px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+h3
+{
+    width: 650px;
+    /*margin-left: 30px;*/
+    text-align: center;
+    color: Navy;
+}
+
+.t1
+{
+    font: georgia, times, arial, Verdana, Arial, Georgia, times, tahoma, serif, sans-serif;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+li
+{
+    vertical-align:top;
+}
+
+pre
+{
+	background-color:#f0f8ff;
+	font-size:smaller;
+}
+
+table li pre
+{
+	background-color:#f0f8ff;
+	font-size:smaller;
+}
+
+a
+{
+	background-color:#f0f8ff;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.nobr {white-space: nowrap}

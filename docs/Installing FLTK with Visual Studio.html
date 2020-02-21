@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+        <title>Installing FLTK with Visual Studio</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <meta http-equiv="Expires" content="Wed, 31 Jan 2007 23:59:59 GMT">
+        <link rel="stylesheet" type="text/css" href="Installing%20FLTK%20with%20Visual%20Studio_files/ordinary.css">
+    <style></style></head>
+    <body>
+    <p>
+        CIS-255 Home:
+        <a href="http://www.c-jump.com/bcc/c255c/c255syllabus.htm"><tt>http://www.c-jump.com/bcc/c255c/c255syllabus.htm</tt></a>
+    </p>
+    <h3>
+        Installing FLTK with Visual Studio
+    </h3>
+    <hr>
+        <ol>
+            <li><a href="#W01_0010_fltk_install_with_vis">FLTK Install with Visual Studio</a></li>
+            <li><a href="#W01_0020_downloading_fltk">Downloading FLTK</a></li>
+            <li><a href="#W01_0030_building_fltk_library">Building FLTK library</a></li>
+            <li><a href="#W01_0040_adding_fltk_library_t">Adding FLTK library to Visual Studio</a></li>
+            <li><a href="#W01_0050_testing_how_it_all_wo">Testing how it all works</a></li>
+        </ol>
+<a id="W01_0010_fltk_install_with_vis"></a>
+
+
+    <h3>
+         FLTK Install with Visual Studio
+    </h3>
+ <hr>
+ <ul style="list-style-type:none;">
+  <li>
+   <p>
+     These instructions explain how to
+    download and install Fast Light Toolkit (FLTK) for bulding Graphical User Interface
+    applications with MSVC++.
+   </p>
+   <p>
+    &nbsp;
+   </p>
+  </li>
+ </ul>
+ <hr>
+
+
+<a id="W01_0020_downloading_fltk"></a>
+
+
+    <h3>
+         Downloading FLTK
+    </h3>
+ <hr>
+ <ul style="list-style-type:none;">
+  <li>
+   <p>
+     Download the source of the latest stable release version
+    (e.g. <tt>fltk-1.3.2-source.tar.gz</tt>) from
+    <a href="http://www.google.com/?q=FLTK%20library" target="_blank">FLTK library</a>
+    website. FLTK is cross-platform tool that works on Linux, MAC OS, and Windows with MSVC++ 2005,
+    2008, 2010, and above.
+   </p>
+  </li>
+  <li>
+   <p>
+    Unzip the downloaded file. The process takes two steps: first, it unzips
+    into a .tar file. Next, unzip the .tar file, which creates a folder
+    named <tt>fltk-1.3.2</tt> (or whatever version you downloaded.)
+    For example,
+   </p>
+<pre><tt>
+    C:\Users\<span style="color: blue">yourname</span>\Downloads\fltk-<font color="#000000">1</font>.<font color="#000000">3</font>.<font color="#000000">2</font>
+</tt>
+</pre>
+   <p>
+    &nbsp;
+   </p>
+  </li>
+ </ul>
+ <hr>
+
+
+<a id="W01_0030_building_fltk_library"></a>
+
+
+    <h3>
+         Building FLTK library
+    </h3>
+ <hr>
+ <ol>
+  <li>
+   <p>
+     Navigate to folder
+   </p>
+<pre><tt>
+    fltk-<font color="#000000">1</font>.<font color="#000000">3</font>.<font color="#000000">2</font>\ide\VisualC2010
+</tt>
+</pre>
+  </li>
+  <li>
+   <p>
+    Double-click the file named <tt>fltk.sln</tt>. It opens a large MSVC++ solution
+    that includes FLTK demo apps and the library itself.
+    Be patient, as it takes almost a minute to load all parts into Visual Studio development
+    environment.
+   </p>
+  </li>
+  <li>
+   <p>
+    Since FLTK is distributed as open source software, you must
+     build the library on our own machine. Go to Visual Studio menu
+   </p>
+<pre><tt>
+    Build -&gt; Configuration Manager...
+</tt>
+</pre>
+   <p>
+    and switch active configuration to <strong>Release</strong>.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click Visual Studio menu
+   </p>
+<pre><tt>
+    Build -&gt; Rebuild Solution
+</tt>
+</pre>
+   <p>
+    Be patient as the surce code is being compiled. It will take several
+    minutes to finish. If everything is okay, you should see a message similar to
+   </p>
+<pre>    ========== Rebuild All: 79 succeeded, 0 failed, 0 skipped ==========
+</pre>
+   <p>
+    at the end.
+   </p>
+  </li>
+  <li>
+   <p>
+    Exit Visual Studio.
+   </p>
+   <p>
+    &nbsp;
+   </p>
+  </li>
+ </ol>
+ <hr>
+
+
+<a id="W01_0040_adding_fltk_library_t"></a>
+
+
+    <h3>
+         Adding FLTK library to Visual Studio
+    </h3>
+ <hr>
+ <ul style="list-style-type:none;">
+  <li>
+   <p>
+     Once built, FLTK can be added to Visual Studio development environment.
+    To begin, locate Visual C++ installation folder on your local machine.
+    In most cases it is
+   </p>
+<pre><tt>
+    <span style="color: blue">On <font color="#000000">32</font>-bit machine:</span> C:\Program Files\Microsoft Visual Studio <font color="#000000">10</font>.<font color="#000000">0</font>\VC
+
+    <span style="color: blue">On <font color="#000000">64</font>-bit machine:</span> C:\Program Files (x86)\Microsoft Visual Studio <font color="#000000">10</font>.<font color="#000000">0</font>\VC
+</tt>
+</pre>
+  </li>
+  <li>
+   <p>
+    There are two steps:
+   </p>
+   <ol>
+    <li>
+     <p>
+       Copy <tt>FL</tt> and <tt>GL</tt> <strong>folders</strong>, for example,
+     </p>
+<pre><tt>
+    C:\Users\<span style="color: blue">yourname</span>\Downloads\fltk-<font color="#000000">1</font>.<font color="#000000">3</font>.<font color="#000000">2</font>\FL
+    C:\Users\<span style="color: blue">yourname</span>\Downloads\fltk-<font color="#000000">1</font>.<font color="#000000">3</font>.<font color="#000000">2</font>\GL
+</tt>
+</pre>
+     <p>
+      to the <tt>include</tt> folder of Visual Studio:
+     </p>
+<pre><tt>
+    <span style="color: blue">On <font color="#000000">32</font>-bit machine:</span> C:\Program Files\Microsoft Visual Studio <font color="#000000">10</font>.<font color="#000000">0</font>\VC\include
+
+    <span style="color: blue">On <font color="#000000">64</font>-bit machine:</span> C:\Program Files (x86)\Microsoft Visual Studio <font color="#000000">10</font>.<font color="#000000">0</font>\VC\include
+</tt>
+</pre>
+    </li>
+    <li>
+     <p>
+      Copy <strong>all files</strong> from the <tt>lib</tt> folder,
+     </p>
+<pre><tt>
+    C:\Users\<span style="color: blue">yourname</span>\Downloads\fltk-<font color="#000000">1</font>.<font color="#000000">3</font>.<font color="#000000">2</font>\lib
+</tt>
+</pre>
+     <p>
+      to the <tt>lib</tt> folder of Visual Studio:
+     </p>
+<pre><tt>
+    <span style="color: blue">On <font color="#000000">32</font>-bit machine:</span> C:\Program Files\Microsoft Visual Studio <font color="#000000">10</font>.<font color="#000000">0</font>\VC\lib
+
+    <span style="color: blue">On <font color="#000000">64</font>-bit machine:</span> C:\Program Files (x86)\Microsoft Visual Studio <font color="#000000">10</font>.<font color="#000000">0</font>\VC\lib
+</tt>
+</pre>
+    </li>
+   </ol>
+   <p>
+    &nbsp;
+   </p>
+  </li>
+ </ul>
+ <hr>
+
+
+<a id="W01_0050_testing_how_it_all_wo"></a>
+
+
+    <h3>
+         Testing how it all works
+    </h3>
+ <hr>
+ <ol>
+  <li>
+   <p>
+     Start Visual Studio again.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click
+   </p>
+<pre>    File -&gt; New -&gt; Project
+</pre>
+   <p>
+    Select <strong>Win32 Project</strong> for the project type. Choose a name, e.g. <tt>fltk_win32_app</tt>,
+    and change project location to
+   </p>
+<pre><tt>
+    C:\CIS255\Projects
+</tt>
+</pre>
+   <p>
+    or something similar. Click <strong>Next</strong> on the project wizard screen and check "Empty project"
+    option, then <strong>Finish</strong>.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click
+   </p>
+<pre><tt>
+    View -&gt; Solution Explorer
+</tt>
+</pre>
+  </li>
+  <li>
+   <p>
+    Right-click on <strong>Source Files</strong> and choose
+   </p>
+<pre><tt>
+    Add -&gt; New item...
+</tt>
+</pre>
+   <p>
+    Use <strong>C++ File (.cpp)</strong> for the type of the file. Name it <tt>main.cpp</tt>.
+   </p>
+  </li>
+  <li>
+   <p>
+    The empty <tt>main.cpp</tt> file automatically opens in the editor.
+    Copy and paste the following code:
+   </p>
+<pre><tt>
+<b><font color="#0000FF">#include</font></b> <font color="#9A1900">&lt;Windows.h&gt;</font> // include Windows.h only if using WinMain
+<b><font color="#0000FF">#include</font></b> <font color="#9A1900">&lt;FL/Fl.H&gt;</font>
+<b><font color="#0000FF">#include</font></b> <font color="#9A1900">&lt;FL/Fl_Box.H&gt;</font>
+<b><font color="#0000FF">#include</font></b> <font color="#9A1900">&lt;FL/Fl_Window.H&gt;</font>
+
+<b><font color="#009900">// Use standard main to have console background:
+</font></b><b><font color="#009900">// int main()
+</font></b>
+<b><font color="#009900">// Use WinMain if you don't want the console in the background:
+</font></b><b><font color="#0000FF">int</font></b> __stdcall WinMain(
+    __in HINSTANCE hInstance,
+    __in_opt HINSTANCE hPrevInstance,
+    __in LPSTR lpCmdLine,
+    __in <b><font color="#0000FF">int</font></b> nShowCmd
+    )
+{
+    Fl_Window window( <font color="#000000">200</font>, <font color="#000000">200</font>, <font color="#9A1900">"My window title"</font> );
+    Fl_Box box( <font color="#000000">0</font>, <font color="#000000">50</font>, <font color="#000000">200</font>, <font color="#000000">20</font>, <font color="#9A1900">"Hello"</font> );
+    window.show();
+    <b><font color="#0000FF">return</font></b> Fl::run();
+}
+</tt>
+</pre>
+  </li>
+  <li>
+   <p>
+    In the Solution Explorer, right-click <strong>fltk_win32_app</strong> project
+    and select <strong>Properties</strong>. You need to make the
+    following three changes:
+   </p>
+<pre><tt>
+    Configuration Properties
+        C/C++
+            Code Generation
+                Runtime Library
+                    &lt;&lt;Edit..&gt;&gt;
+                        and set it to <span style="background-color: yellow">Multi-threaded DLL (/MD)</span>
+        Linker
+            Input
+                Additional Dependecies
+                    &lt;&lt;Edit..&gt;&gt;
+                        and enter <span style="background-color: yellow">fltk.lib</span>
+
+                Ignore Specific Default Libraries
+                    &lt;&lt;Edit..&gt;&gt;
+                        and enter <span style="background-color: yellow">libcd.lib</span>
+</tt>
+</pre>
+   <p>
+    For example,
+   </p>
+   <p>
+    &nbsp;
+    <img src="Installing%20FLTK%20with%20Visual%20Studio_files/project_properties.png" alt="Additional Dependecies">
+   </p>
+   <p>
+    Click <strong>OK</strong> and save your changes.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click Visual Studio menu
+   </p>
+<pre><tt>
+    Build -&gt; Rebuild Solution
+</tt>
+</pre>
+  </li>
+  <li>
+   <p>
+    Press F5 to run the program.
+   </p>
+  </li>
+  <li>
+   <p>
+    Everything should compile and run without any problems. If you do get an error,
+    send me an email, so I can look at the issue.
+   </p>
+   <p>
+    &nbsp;
+   </p>
+  </li>
+ </ol>
+
+
+    
+
+
+</body></html>
