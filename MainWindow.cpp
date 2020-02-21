@@ -26,8 +26,10 @@ int __stdcall WinMain(
     win->position(400, 100);
 
     Fl_Text_Editor* buildSpecEdior = new Fl_Text_Editor(30, 25, 1075, 475, "BuildSpec");
+    buildSpecEdior->align(FL_ALIGN_TOP | FL_ALIGN_LEFT);
 
     Fl_Text_Buffer* buff_buildSpecEdior = new Fl_Text_Buffer();      // text buffer
+    
     buildSpecEdior->buffer(buff_buildSpecEdior);
 
     buff_buildSpecEdior->text("line 0\nline 1");
@@ -36,14 +38,10 @@ int __stdcall WinMain(
     runBuild->callback(runBuild_cb);
     
     Fl_Text_Display* buildLogs = new Fl_Text_Display(30, 550, 1075, 265, "Build Logs");
+    buildLogs->align(FL_ALIGN_TOP  | FL_ALIGN_LEFT);
     Fl_Text_Buffer* buff_buildLogs = new Fl_Text_Buffer();      // text buffer
     buildLogs->buffer(buff_buildLogs);
     buff_buildLogs->text("ced");
-
-    //Fl_Text_Display* statusBar = new Fl_Text_Display(0, 830, 1140, 25, "StatusBar");
-    //Fl_Text_Buffer* buff_statusBar = new Fl_Text_Buffer();      // text buffer
-    //statusBar->buffer(buff_statusBar);
-    //buff_statusBar->text("Ready.");
 
     // Create output to show scrollbar's value
     Fl_Output* status = new Fl_Output(0, 830, 1140, 25, "StatusBar");
